@@ -1,0 +1,21 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>3rd Question</title>
+</head>
+<body>
+    <h2>VIEW CONSOLE</h2>
+    <script>
+        var parse_url = document.createElement('a');
+        parse_url.innerHTML = "link";
+        parse_url.href = "http://abcd.com:8900/pathname/?search=test#hash";
+
+        console.log("protocol: " + parse_url.protocol + "\nhostname: " + parse_url.hostname + "\nport: " + parse_url.port+
+            "\npathname: " + parse_url.pathname+"\nsearch: " + parse_url.search+"\nhash: " +
+            parse_url.hash+"\nhost: " + parse_url.host);
+
+    </script>
+</body>
+</html>

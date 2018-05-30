@@ -1,0 +1,38 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>1st Question</title>
+
+</head>
+<body>
+    <button onclick="startClock()">Show Time</button>
+<div id="clock"></div>
+
+    <script>
+    // to add 0 before if time<10
+        function checkTime(i) {
+            if (i < 10) {
+                i = "0" + i;
+            }
+            return i;
+        }
+
+        function startClock() {
+            var today = new Date();
+            var hour = today.getHours();
+            var minute = today.getMinutes();
+            var second = today.getSeconds();
+
+            minute = checkTime(minute);
+            second = checkTime(second);
+            document.getElementById('clock').innerHTML = hour + ":" + minute + ":" + second;
+            t = setTimeout(function () {
+                startClock()
+            }, 500);
+        }
+
+    </script>
+</body>
+</html>

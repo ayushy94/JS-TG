@@ -1,0 +1,26 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>6th Question</title>
+</head>
+<body>
+
+<img src="images/new.png" onclick="openNewWindow()"/>
+    <br>
+    <button onclick="closeWin()">close Tab</button>
+    <script>
+        var new_wind;
+        function openNewWindow()
+        {
+          new_wind=  window.open("https://www.google.co.in/", '_blank');
+        }
+        function closeWin()
+        {
+            new_wind.close();
+        }
+    </script>
+
+</body>
+</html>

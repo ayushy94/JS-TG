@@ -1,0 +1,32 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>8th Question</title>
+</head>
+<body>
+    <input list="states" name="state">
+    <datalist id="states">
+        <option value="Maharashtra">
+        <option value="J&K">
+        <option value="Gujarat">
+        <option value="UP">
+        <option value="Kerala">
+        <option value="Orissa">
+    </datalist>
+    <input type="submit">
+    <script>
+        var drop = document.getElementById("states");
+        var count = drop.childElementCount;
+        var values = "";
+        for(var i=0;i<count;i++)
+        {
+            values+=(drop.children[i].value)+"\n";
+        }
+
+        alert("count= " + count + "\n" + values);
+    </script>
+
+</body>
+</html>
